@@ -7,7 +7,12 @@ apx.once('ready',function(){
 //pass options and configure
 apx.start({
   cwd: __dirname,
-  initializers: ['apx-winston'],
+  initializers: [
+    'apx-kue',
+    'apx-mongoose',
+    'apx-winston'
+  ],
+  middleware: ['apx-session'],
   translators: ['apx-express-socket.io'],
   express: {
     routes: [

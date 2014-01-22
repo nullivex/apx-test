@@ -31,6 +31,7 @@
   "dependencies": {
     "apx": "snailjs/apx#master",
     "apx-express-socket.io": "snailjs/apx-express-socket.io#master",
+    "apx-helper-crud": "snailjs/apx-helper-crud#master",
     "apx-kue": "snailjs/apx-kue",
     "apx-mongoose": "snailjs/apx-mongoose#master",
     "apx-session": "snailjs/apx-session#master",
