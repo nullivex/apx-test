@@ -7,6 +7,7 @@ apx.once('ready',function(){
 
 //pass options and configure
 apx.start({
+  sysLogLevel: 4,
   cwd: __dirname,
   config: ['config.js'],
   initializers: [
@@ -19,12 +20,14 @@ apx.start({
   tasks: 'tasks/*.js',
   express: {
     routes: [
-      {get: {path: '/foo', file: 'actions/foo.js'}}
+      {get: {path: '/foo', file: 'actions/foo.js'}},
+      {get: {path: '/raw', file: 'actions/raw.js'}}
     ]
   },
   'socket-io': {
     routes: [
-      {foo: 'actions/foo.js'}
+      {foo: 'actions/foo.js'},
+      {raw: 'actions/raw.js'}
     ]
   }
 })
