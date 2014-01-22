@@ -40,6 +40,5 @@ module.exports = function(grunt){
   grunt.registerTask('update',['projectUpdate'])
   grunt.registerTask('test',['jshint','mochaTest:test'])
   grunt.registerTask('dev',['watch:dev'])
-  grunt.registerTask('start',['nodemon:production'])
 
 }

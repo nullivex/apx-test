@@ -35,7 +35,9 @@
     "apx-kue": "snailjs/apx-kue",
     "apx-mongoose": "snailjs/apx-mongoose#master",
     "apx-session": "snailjs/apx-session#master",
-    "apx-winston": "snailjs/apx-winston#master"
+    "apx-winston": "snailjs/apx-winston#master",
+    "mongoose-list": "~0.2.0",
+    "mongoose-merge-plugin": "0.0.3"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
@@ -45,7 +47,9 @@
     "grunt-project-update": "~0.2.2",
     "mocha": "~1.15.1",
     "chai": "~1.8.1",
-    "jshint-stylish": "~0.1.3"
+    "jshint-stylish": "~0.1.3",
+    "restler": "~3.1.0",
+    "socket.io-client": "~0.9.16"
   },
   "scripts": {
     "test": "grunt test"

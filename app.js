@@ -1,3 +1,4 @@
+'use strict';
 var apx = require('apx')
 
 apx.once('ready',function(){
@@ -7,6 +8,7 @@ apx.once('ready',function(){
 //pass options and configure
 apx.start({
   cwd: __dirname,
+  config: ['config.js'],
   initializers: [
     'apx-kue',
     'apx-mongoose',
@@ -14,13 +16,15 @@ apx.start({
   ],
   middleware: ['apx-session'],
   translators: ['apx-express-socket.io'],
+  tasks: 'tasks/*.js',
   express: {
     routes: [
       {get: {path: '/foo', file: 'actions/foo.js'}}
     ]
   },
   'socket-io': {
-    enabled: false
-  },
-  winston: {file: 'foo.log'}
+    routes: [
+      {foo: 'actions/foo.js'}
+    ]
+  }
 })
